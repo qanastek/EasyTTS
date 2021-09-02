@@ -1,0 +1,13 @@
+README.md
+setup.py
+EasyTTS/__init__.py
+EasyTTS/version.txt
+EasyTTS.egg-info/PKG-INFO
+EasyTTS.egg-info/SOURCES.txt
+EasyTTS.egg-info/dependency_links.txt
+EasyTTS.egg-info/requires.txt
+EasyTTS.egg-info/top_level.txt
+EasyTTS/inference/TTS.py
+EasyTTS/inference/__init__.py
+EasyTTS/models/__init__.py
+EasyTTS/utils/__init__.py

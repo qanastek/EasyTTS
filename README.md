@@ -22,6 +22,7 @@ EasyTTS is constantly evolving. New features, tutorials, and documentation will 
 ```bash
 conda create --name EasyTTS python=3.7 -y
 conda activate EasyTTS
+pip install git+https://github.com/repodiac/german_transliterate
 ```
 
 More information on managing environments with Anaconda can be found in [the conda cheat sheet](https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf).
@@ -32,6 +33,7 @@ Once you have created your Python environment (Python 3.7+) you can simply type:
 
 ```bash
 pip install EasyTTS
+pip install git+https://github.com/repodiac/german_transliterate
 ```
 
 ## Install with GitHub
@@ -50,12 +52,20 @@ Any modification made to the `EasyTTS` package will be automatically interpreted
 # Example Usage
 
 ```python
-from EasyTTS.inference import TTS
+import soundfile as sf
+from EasyTTS.inference.TTS import TTS
 
-audio = TTS(lang="fr", text="Bonjour à tous")
+tts = TTS(lang="fr") # Instantiate the model for your language
+audio = tts.predict(text="Bonjour à tous") # Make a prediction
 
-sf.write('./audio.wav', audio, 22050, "PCM_16") # Save to a .WAV file
+sf.write('./audio_pip.wav', audio, 22050, "PCM_16") # Save output in .WAV file
 ```
+
+# Audios Samples
+
+| Sentence | Language |            Audio File            |
+|:--------:|:--------:|:--------------------------------:|
+|     Comme le capitaine prononçait ces mots, un éclair illumina les ondes de l'Atlantique, puis une détonation se fit entendre et deux boulets ramés balayèrent le pont de l'Alcyon.     |    FR    | [audio_fr.wav](https://raw.githubusercontent.com/qanastek/EasyTTS/main/ressources/audios/audio_fr.wav) |
 
 # Model architectures
 
