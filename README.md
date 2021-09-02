@@ -7,15 +7,15 @@
 [![Contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
 
-EasyTTS is an open-source and easy to use all-in-one huggingface wrapper for computer vision.
+EasyTTS is an open-source and ready-to-use Multilingual Text-To-Speech (TTS) package.
 
-The goal is to create a fast, flexible and user-friendly toolkit that can be used to easily develop **state-of-the-art** computer vision technologies, including systems for Image Classification, Semantic Segmentation, Object Detection, Image Generation, Denoising and much more.
+The goal is to simplify usages of **state-of-the-art** text-to-speech models for a variety of languages (french, english, ...).
 
 ⚠️ EasyTTS is currently in beta. ⚠️
 
 # Quick installation
 
-EasyTTS is constantly evolving. New features, tutorials, and documentation will appear over time. EasyTTS can be installed via PyPI to rapidly use the standard library. Moreover, a local installation can be used by those users than want to run experiments and modify/customize the toolkit. EasyTTS supports both CPU and GPU computations. For most recipes, however, a GPU is necessary during training. Please note that CUDA must be properly installed to use GPUs.
+EasyTTS is constantly evolving. New features, tutorials, and documentation will appear over time. EasyTTS can be installed via PyPI to rapidly use the standard library. Moreover, a local installation can be used by those users than want to run experiments and modify/customize the toolkit. EasyTTS supports both CPU and GPU computations. Please note that CUDA must be properly installed to use GPUs.
 
 ## Anaconda setup
 
@@ -61,7 +61,7 @@ sf.write('./audio.wav', audio, 22050, "PCM_16") # Save to a .WAV file
 
 1. **[Tacotron 2](https://github.com/NVIDIA/tacotron2)** (from Google Research &  University of California, Berkeley) released with the paper [NATURAL TTS SYNTHESIS BY CONDITIONING WAVENET ON MEL SPECTROGRAM PREDICTIONS](https://arxiv.org/pdf/1712.05884.pdf), by Jonathan Shen, Ruoming Pang, Ron J. Weiss, Mike Schuster, Navdeep Jaitly, Zongheng Yang, Zhifeng Chen, Yu Zhang, Yuxuan Wang, RJ Skerry-Ryan, Rif A. Saurous, Yannis Agiomyrgiannakis and Yonghui Wu.
 
-# Datasets
+# Datasets used
 
 1. **[SynPaFlex](http://synpaflex.irisa.fr/fr/)** (from IRISA, LLF (Laboratoire de Linguistique Formelle de Nantes), LIUM (Le Mans Université) and ATILF (Analyse et Traitement Informatique de la Langue Française)) released with the paper [SynPaFlex-Corpus: An Expressive French Audiobooks Corpus Dedicated to Expressive Speech Synthesis](https://hal.archives-ouvertes.fr/hal-01826690), by Aghilas Sini, Damien Lolive, Gaëlle Vidal, Marie Tahon and Élisabeth Delais-Roussarie.
 
