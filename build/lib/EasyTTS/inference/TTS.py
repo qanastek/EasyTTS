@@ -12,30 +12,53 @@ class TTS(object):
     """ 
     def __init__(self, lang="fr"):
 
-        self.lang = lang
+        self.lang = lang.lower()
 
-        if lang not in ["fr"]:
+        self.languages = {
+            "fr": {
+                "processor": "tensorspeech/tts-tacotron2-synpaflex-fr",
+                "model": "tensorspeech/tts-tacotron2-synpaflex-fr",
+                "melgan": "tensorspeech/tts-mb_melgan-synpaflex-fr",
+            },
+            "ger": {
+                "processor": "tensorspeech/tts-tacotron2-thorsten-ger",
+                "model": "tensorspeech/tts-tacotron2-thorsten-ger",
+                "melgan": "tensorspeech/tts-mb_melgan-thorsten-ger",
+            },
+            "en": {
+                "processor": "tensorspeech/tts-tacotron2-ljspeech-en",
+                "model": "tensorspeech/tts-tacotron2-ljspeech-en",
+                "melgan": "tensorspeech/tts-mb_melgan-ljspeech-en",
+            },
+            "ch": {
+                "processor": "tensorspeech/tts-tacotron2-baker-ch",
+                "model": "tensorspeech/tts-tacotron2-baker-ch",
+                "melgan": "tensorspeech/tts-mb_melgan-baker-ch",
+            },
+        }
+
+        if self.lang not in self.languages:
             print("This language isn't supported yet!")
-
-        if self.lang == "fr":                   
-            self.processor = AutoProcessor.from_pretrained("tensorspeech/tts-tacotron2-synpaflex-fr")
-            self.tacotron2 = TFAutoModel.from_pretrained("tensorspeech/tts-tacotron2-synpaflex-fr")
-            self.mb_melgan = TFAutoModel.from_pretrained("tensorspeech/tts-mb_melgan-synpaflex-fr")
+                
+        self.processor = AutoProcessor.from_pretrained(self.languages[lang]["processor"])
+        self.tacotron2 = TFAutoModel.from_pretrained(self.languages[lang]["model"])
+        self.mb_melgan = TFAutoModel.from_pretrained(self.languages[lang]["melgan"])
 
     """
     ⚙️ Make a prediction
     """
     def predict(self, text="Bonjour le monde"):
 
-        if self.lang == "fr":
-            return self.frTTS(text)
+        if self.lang in self.languages:
+            print("Prediction started!")
+            return self.predictTacotron2(text)
         else:            
             return None
 
     """
-    French TTS Model
+    TTS Model Tacotron2
     """
-    def frTTS(self,text):
+    def predictTacotron2(self,text):
 
         input_ids = self.processor.text_to_sequence(text)
 

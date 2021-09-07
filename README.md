@@ -66,6 +66,7 @@ sf.write('./audio_pip.wav', audio, 22050, "PCM_16") # Save output in .WAV file
 | Sentence | Language |            Audio File            |
 |:--------:|:--------:|:--------------------------------:|
 |     Comme le capitaine prononçait ces mots, un éclair illumina les ondes de l'Atlantique, puis une détonation se fit entendre et deux boulets ramés balayèrent le pont de l'Alcyon.     |    FR    | [audio_fr.wav](https://raw.githubusercontent.com/qanastek/EasyTTS/main/ressources/audios/audio_fr.wav) |
+|     We shall not flag or fail. We shall go on to the end... we shall never surrender.     |    EN    | [audio_en.wav](https://raw.githubusercontent.com/qanastek/EasyTTS/main/ressources/audios/audio_en.wav) |
 
 # Model architectures
 
