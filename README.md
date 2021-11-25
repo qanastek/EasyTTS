@@ -6,6 +6,7 @@
 [![GitHub Issues](https://img.shields.io/github/issues/qanastek/EasyTTS.svg)](https://github.com/qanastek/EasyTTS/issues)
 [![Contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
+[![Downloads](https://static.pepy.tech/personalized-badge/easytts?period=total&units=none&left_color=grey&right_color=orange&left_text=Downloads)](https://pepy.tech/project/easytts)
 
 EasyTTS is an open-source and ready-to-use Multilingual Text-To-Speech (TTS) package.
 
