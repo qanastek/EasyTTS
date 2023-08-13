@@ -1,6 +1,0 @@
-numpy
-timm
-torch
-tensorflow
-soundfile
-TensorFlowTTS
